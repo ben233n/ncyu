@@ -5,7 +5,7 @@ import Head from './components/Head/Head'
 import Big from './components/Big/Big'
 import New from './components/New/New'
 import Case from './components/Case/Case'
-import Foot from './components/Foot/foot'
+import Foot from './components/Foot/Foot'
 
 
 function App() {

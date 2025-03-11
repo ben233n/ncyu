@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './work.module.css'
+import styles from './Work.module.css'
 const Work = ({pp,img}) => {
   return (
     <div className={styles.bg}>
