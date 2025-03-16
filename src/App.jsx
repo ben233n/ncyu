@@ -1,23 +1,26 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import Head from './components/Head/Head'
-import Big from './components/Big/Big'
-import New from './components/New/New'
-import Case from './components/Case/Case'
-import Foot from './components/Foot/Foot'
+import Home from './pages/Home/Home'
+import { Route, Routes, Link } from 'react-router-dom'
+import Look from './pages/Look/Look'
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
-    <>
-      <Head/>
-      <Big/>
-      <New/>
-      <Case/>
-      <Foot/>
-    </>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path="look/:id" element={<Look/>} />
+    </Routes>
   )
 }
 

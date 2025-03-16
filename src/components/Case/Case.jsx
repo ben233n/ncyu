@@ -1,14 +1,9 @@
 import React from 'react'
 import styles from './Case.module.css'
 import Work from '../Work/Work'
-import w1 from '../../../public/w1.png'
-import w2 from '../../../public/w2.png'
-import w3 from '../../../public/w3.png'
-import w4 from '../../../public/w4.png'
-import w5 from '../../../public/w5.png'
-import w6 from '../../../public/w6.png'
+import { Link } from 'react-router-dom'
 
-const Case = () => {
+const Case = ({items}) => {
   return (
     <>
       <div className={styles.bg_up}>
@@ -17,30 +12,10 @@ const Case = () => {
       </div>
       <div className={styles.down}>
           <div className={`${styles.container} container `}>
-              <Work
-                img={w1}
-                pp="春山秋水/簡物之禪"
-              />
-              <Work
-                img={w2}
-                pp="砂與石的靜謐之美"
-              />
-              <Work
-                img={w3}
-                pp="古松盤旋/禪意庭園"
-              />
-              <Work
-                img={w4}
-                pp="水鏡映樹/靜美如畫"
-              />
-              <Work
-                img={w5}
-                pp="綠樹春邊河"
-              />
-              <Work
-               img={w6}
-               pp="枯山水/靜謐中的自然美學"
-              />
+          {items.map((item) => (
+              <Work key={item.id} img={item.photoPath} pp={item.name} id={item.id}/>
+            
+          ))}
           </div>
         </div>
     </>

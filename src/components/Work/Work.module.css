@@ -12,6 +12,10 @@
 .img{
     width: 100%;
     aspect-ratio: 4/3;
+    transition: 0.3s ease-in-out; 
+}
+.img:hover{
+    filter: brightness(0.7); /* 變暗 */
 }
 
 .p{

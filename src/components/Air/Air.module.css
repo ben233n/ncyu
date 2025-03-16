@@ -1,0 +1,16 @@
+.air{
+    height: 80px;
+} 
+
+@media (max-width: 992px) {
+    .air{
+        height: 100px;
+    } 
+
+}
+  /* 手機 */
+@media (max-width: 576px) {
+    .air{
+        height: 60px;
+    } 
+}

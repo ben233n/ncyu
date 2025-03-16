@@ -1,0 +1,63 @@
+.bg{
+    margin: 32px 0px;
+}
+.container{
+    display: flex;
+    width: 100%;
+    gap: 50px;
+
+}
+.img {
+    width: calc(50%);  /* 圖片自適應寬度 */
+    height: auto;  /* 高度自動調整 */
+}
+.rightside{
+    width: calc(50%);
+}
+.text{
+    color: #797979;
+}  
+
+.h2{
+  font-size: 2rem;
+  font-weight: 400;
+}
+.p{
+  margin: 24px 0px 48px 0px ;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.button{
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: #9FA69E;
+  color: #f5f5f5;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background-color: #606861;
+}
+
+
+@media (max-width: 800px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .img {
+    width: calc(100%);  /* 圖片自適應寬度 */
+    height: auto;  /* 高度自動調整 */
+  }
+.rightside{
+    width: calc(100%);
+  }
+}
+  /* 手機 */
+@media (max-width: 576px) {
+
+
+
+}

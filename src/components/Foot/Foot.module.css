@@ -52,6 +52,10 @@
     margin: 12px 0px 24px 0px;
 
 }
+.icon{
+    display:flex;
+    flex-direction: row;
+}
 .icon_img{
     margin-right: 24px;
     cursor: pointer;
