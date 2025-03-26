@@ -1,0 +1,41 @@
+.bg{
+    width: 100%;
+    height: auto;
+    padding: 24px;
+    background-color: #F5F5F5;
+    margin: 24px 0px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: space-between; /* 讓文字區塊在左，星星區塊在右 */
+    align-items:center; /* 對齊頂部 */
+    gap: 10px; /* 讓留言與星星保持間距 */
+    
+}
+
+.h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #6e6d6d;
+}
+.p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #797979;
+    overflow-wrap: break-word;
+    white-space: normal; /* 允許多行顯示 */
+    width: auto;
+    flex: 1; /* 讓留言區域自適應可用空間 */
+
+    word-break: break-word; /* 讓長文字換行 */
+}
+.star_div{
+    display: flex;
+    flex-direction: row;
+}
+.icon{
+    color: #6e6d6d;
+}
+.no_icon{
+    color: #afadad;
+}

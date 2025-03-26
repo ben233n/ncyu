@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Work.module.css'
 import { Link } from 'react-router-dom'
+
 const Work = ({pp,img,id}) => {
   return (
     <div className={styles.bg}>

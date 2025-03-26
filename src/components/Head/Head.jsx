@@ -4,6 +4,7 @@ import logo from '../../../public/logo.svg'
 import menu from '../../../public/menu.svg'
 import { Link } from 'react-router'
 const Head = () => {
+  
   return (
     <>
         <div className={styles.bg}>

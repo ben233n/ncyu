@@ -14,6 +14,7 @@ const Home = () => {
         <Head/>
         <Air/>
         <Case items={imgdata}/>
+
         <Foot/>
     </>
   )
