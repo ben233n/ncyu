@@ -4,17 +4,17 @@ import { addItem } from '../../redux/cartSlice'; // 引入 Redux 的 addItem act
 import styles from './Lookitem.module.css';
 
 const Lookitem = ({ img, word, article, like }) => {
-  const [isbang, setIsBang] = useState(like); // 初始的點讚數
+  const [bang, setBang] = useState(like); // 初始的點讚數
   const [islove, setIslove] = useState(true); // 判斷是否已經點過讚
   const dispatch = useDispatch(); // 初始化 dispatch 來執行 action
 
   // 點讚處理函數
   const loveAsk = () => {
     if (islove) {
-      setIsBang(isbang + 1); // 點讚，數量增加
+      setBang(bang + 1); // 點讚，數量增加
       setIslove(false);  // 變更狀態為已點讚
     } else {
-      setIsBang(isbang - 1); // 取消點讚，數量減少
+      setBang(bang - 1); // 取消點讚，數量減少
       setIslove(true);   // 變更狀態為未點讚
     }
   };
@@ -42,7 +42,7 @@ const Lookitem = ({ img, word, article, like }) => {
                   <path style={{ fill: islove ? "#9FA69E" : "#606861" }} d="M8.60572 3.92055C6.9039 3.9198 5.32856 4.46307 4.18656 5.53196C3.04486 6.59978 2.35588 8.18922 2.35578 10.1703C2.35593 12.2487 3.81809 14.1812 5.79822 16.078C7.77874 17.9756 10.3265 19.8479 12.6584 21.7915C12.7959 21.9016 13.0101 21.9006 13.147 21.7909C15.4781 19.8488 18.0209 17.9703 20.0068 16.0786C21.9944 14.1868 23.4737 12.2709 23.4743 10.1704C23.4745 8.16766 22.7613 6.59483 21.6187 5.53147C20.4761 4.4681 18.9242 3.92074 17.2241 3.91988C15.4751 3.9202 13.9974 5.02324 12.9028 6.14144C11.8127 5.02978 10.3512 3.92043 8.60572 3.92055Z" />
                 </g>
               </svg>
-              <p>{isbang}</p>
+              <p>{bang}</p>
             </div>
             <button onClick={handleReservation} className={styles.button}>線上預約</button>
           </div>
