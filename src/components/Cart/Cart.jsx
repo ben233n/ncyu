@@ -48,7 +48,7 @@ const Cart = () => {
                     <div className={styles.img_div}>
                       <img src={item.img} alt={item.name} style={{ width: '100%', height: '100%' }} />  {/* 顯示商品圖片 */}
                     </div>
-                    {item.name}  {/* 顯示商品名稱 */}
+                    <h4 className={styles.h4}>{item.name}</h4> 
                   </div>
 
                   
