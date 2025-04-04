@@ -39,3 +39,19 @@
 .no_icon{
     color: #afadad;
 }
+
+@media (max-width: 576px) {
+    .bg{
+        padding: 14px;
+
+        
+    }
+    .icon{
+        width: 20px;
+        height: 20px;
+    }
+    .no_icon{
+        width: 20px;
+        height: 20px;
+    }
+}

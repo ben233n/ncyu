@@ -92,9 +92,12 @@
   padding: 24px 0;
   border-bottom: 1.5px solid #9FA69E;
   align-items: center;
+  justify-content:space-between;
 }
 
 .addgoods_item{
+  width: 90%;
+
   display: flex;
   gap: 12px;
 }
