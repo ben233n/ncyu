@@ -1,9 +1,12 @@
 import React from 'react'
 import styles from './Head.module.css'
 import logo from '../../../public/logo.svg'
-import menu from '../../../public/menu.svg'
 import { Link } from 'react-router'
+import Cart from '../Cart/Cart'
+import Menu from '../../assets/menu.svg?react';
+import { useMediaQuery } from 'react-responsive';
 const Head = () => {
+  const isNotTablet = useMediaQuery({ query: '(max-width: 576px), (min-width: 992px)' });
   
   return (
     <>
@@ -20,9 +23,14 @@ const Head = () => {
               <li className={styles.nav_li}>作品展示</li>
               <li className={styles.nav_li}>服務流程</li>
               <li className={styles.nav_li}>聯絡我們</li>
-              <button className={styles.nav_QandA}>線上諮詢</button>
+              {!isNotTablet &&<Cart />}
             </nav>
-            <img src={menu} alt="" className={styles.menu}/>
+            
+            <div style={{display:'flex',gap:'20px',alignItems:'center'}}>
+              {isNotTablet &&<Cart/>}
+              <Menu className={styles.menu}/>
+            </div>
+
           </div>
         </div>
     </>
